@@ -12,11 +12,14 @@
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
 
-- หน้า Login
-- หน้า Register
-- หน้า Forgot Password
-- หน้า Pokedex (Pokemon List)
-- หน้า Search Pokemon
+
+
+|                       Forgot Password                        |                    Pokedex (Pokemon List)                    |                        Search Pokemon                        |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
+
+
+
 - หน้า Pokemon Detail (รายละเอียดของ Pokemon ตัวนั้น ๆ)
 - หน้า My Pokemons (Pokemon list ของ User ที่ได้ทำการ bookmark ไว้)
 - หน้า My Profile
