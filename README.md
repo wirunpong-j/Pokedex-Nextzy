@@ -8,9 +8,9 @@
 
 ## หน้าต่างต้องประกอบไปด้วย
 
-|                        Splash Screen                         |                            Login                             |
-| :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
+|                        Splash Screen                         |                            Login                             |                           Register                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
 
 - หน้า Login
 - หน้า Register
