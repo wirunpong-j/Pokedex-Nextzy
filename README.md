@@ -9,8 +9,7 @@
 ## หน้าต่างต้องประกอบไปด้วย
 
 - หน้า Splash screen
-
-  <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300">
 
 - หน้า Login
 
