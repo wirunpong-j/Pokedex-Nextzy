@@ -20,11 +20,22 @@
 
 
 
-- หน้า Pokemon Detail (รายละเอียดของ Pokemon ตัวนั้น ๆ)
-- หน้า My Pokemons (Pokemon list ของ User ที่ได้ทำการ bookmark ไว้)
-- หน้า My Profile
-- หน้า Edit My Profile
-- หน้า Terms and Conditions
+|                        Pokemon Detail                        |                         My Pokemons                          |                          My Profile                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
+
+
+
+|                       Edit My Profile                        |                     Terms and Conditions                     |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> | <img src="https://raw.githubusercontent.com/wirunpong-j/Pokedex-Nextzy/master/Resource/splashscreen.gif" width="300"> |
+
+
+
+### รายละเอียดเพิ่มเติม
+
+- หน้า Pokemon Detai คือ หน้าที่รายละเอียดของ Pokemon ตัวนั้น ๆ
+- หน้า My Pokemons คือ หน้าที่แสดง Pokemon list ของ User ที่ได้ทำการ bookmark ไว้
 
 ##  Checklist
 
