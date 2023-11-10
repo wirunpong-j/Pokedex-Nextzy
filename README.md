@@ -1,12 +1,16 @@
 # Pokedex-Nextzy
+- Create a Pokédex iOS application using Swift and the MVVM architecture. Details are provided below.
+- Fork this project and perform your work on the forked repository. Proper commit separation and informative commit messages are part of the evaluation.
+- Once you have finished the application, email the link to your repository back to us for evaluation.
+- You have one week to complete this evaluation, starting from the date the email is sent and ending at midnight after seven days. 
 
-## API ที่ต้องใช้
+## API to Use
 
-- **GET** [Pokemon list] โดยจะใช้
+- For the Pokémon list, make a **GET** request using either:
   - https://raw.githubusercontent.com/wirunpong-j/PokedexAPIMock/master/pokemons.json 
-  - หรือจาก https://pokeapi.co ก็ได้
+  - https://pokeapi.co (Preferred)
 
-## หน้าต่างต้องประกอบไปด้วย
+## The app should include the following screens
 
 |                        Splash Screen                         |                            Login                             |                           Register                           |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
@@ -32,36 +36,35 @@
 
 
 
-### รายละเอียดเพิ่มเติม
+### Additional Details
 
-- หน้า Pokemon Detai คือ หน้าที่รายละเอียดของ Pokemon ตัวนั้น ๆ
-- หน้า My Pokemons คือ หน้าที่แสดง Pokemon list ของ User ที่ได้ทำการ bookmark ไว้
-- หน้า Terms and Conditions เอามาจาก https://pokedex-nextzy.web.app
+- The "Pokémon Detail" page is designed to present the specifics of the chosen Pokémon.
+- "My Pokémon" showcases a compilation of the user's bookmarked Pokémon.
+- Retrieve the "Terms and Conditions" content from https://pokedex-nextzy.web.app.
 
 ##  Checklist
 
-- ใช้ Alamofire หรืออื่น ๆ ในการทำ API request
-- ใช้ Codable ใน mapping ข้อมูลจาก JSON
-- ใช้ Table View หรือ Scroll View ในการแสดงผลหน้า Pokemon Detail
-- ใช้ Apple Maps หรือ Google Maps ในหน้า Pokemon Detail
-- ใช้ Collection View ในการแสดงผลรายการของ Pokemon อย่างน้อย 1 แบบ
-- ใช้ Firebase ในการ Login/Register/Forgot Password
-- ใช้ Firebase ในการเก็บรูปภาพประจำตัวของ User
-- ใช้ Firebase เก็บข้อมูล Pokemon ที่ User bookmark เอาไว้
-- ใช้ design pattern MVVM ในการพัฒนา
-- ใช้ Sign In With Apple
-- Render Video Background
-- Render ภาพจาก Url โดยใช้ Kingfisher หรืออื่น ๆ
-- รูปภาพที่เป็นพวก icon หรือ button ที่ใช้ใน Application จะต้องเป็น Vector (ยกเว้นพวกรูป Pokemon เพราะ APIs เป็นคนส่งมาให้)
-- สามารถ Search หา Pokemon จากใน List ได้ เช่น พิมพ์คำว่า “Ba” ก็จะแสดงรายการ Pokemon ที่มีคำว่า “Ba” ประกอบอยู่ด้วย
-- มีการใช้ `WKWebView` ในการแสดงผลในหน้า Terms and Conditions
-- ใช้ RxSwift
-- ใช้ Pull to refresh
-- ใช้ Animation หรือ Transition ต่าง ๆ เช่น Hero หรืออื่น ๆ
-- ใช้ Navigation Bar
-- ใช้ Tab Bar
-- ใช้ Auto Layout
-- App ต้องรองรับขนาดหน้าจอทุกขนาดของ iPhone
-- มีการใช้ Loading View ต่าง ๆ
-- มีการ Library ผ่าน Cocoapods หรือ Swift Package Manager
-- มีการใช้ Library อื่น ๆ
+- Implement Alamofire for network API requests.
+- Apply Codable to transform data from JSON.
+- Employ a Table View or Scroll View for rendering the "Pokémon Detail" page.
+- Embed Apple Maps or Google Maps on the "Pokémon Detail" page.
+- Use a Collection View to exhibit Pokémon in at least one layout.
+- Leverage Firebase for authentication processes including Login, Register, and Forgot Password.
+- Store user avatar images in Firebase.
+- Keep the user's bookmarked Pokémon information in Firebase.
+- Adhere to the MVVM architectural pattern during development.
+- Facilitate user sign-in with Apple's authentication service.
+- Enhance the app with video backgrounds.
+- Render images from URLs using Kingfisher or a similar library.
+- Ensure that all icons and buttons are vector images, excluding Pokémon images provided by the APIs.
+- Implement a search feature that filters Pokémon in the list; for instance, entering “Ba” should bring up Pokémon with names containing “Ba”.
+- Display the "Terms and Conditions" using WebView.
+- Integrate a "Pull to Refresh" feature.
+- Incorporate engaging animations or transitions, such as Hero.
+- Incorporate a Navigation Bar for app navigation.
+- Add a Tab Bar for switching between different sections.
+- Design the interface using Auto Layout to ensure responsiveness across different screen sizes.
+- Guarantee that the app supports all iPhone screen sizes.
+- Introduce various Loading Views to enhance the user experience.
+- Manage third-party libraries via Cocoapods or Swift Package Manager.
+- Include additional libraries as necessary to meet development needs.
