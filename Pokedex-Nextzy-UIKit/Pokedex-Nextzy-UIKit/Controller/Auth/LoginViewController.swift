@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
         button.backgroundColor = .systemBackground
         button.alpha = 0.6
         button.layer.cornerRadius = 6
-        button.addTarget(self, action: #selector(forgotPasswordClicked(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapForgotPasswordButton(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         button.backgroundColor = UIColor(red: 0.941, green: 0.388, blue: 0.396, alpha: 1) // #f06365
         button.alpha = 1
         button.layer.cornerRadius = 6
-        button.addTarget(self, action: #selector(loginClicked(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapLoginButton(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .systemBackground
         button.alpha = 0.6
-        button.addTarget(self, action: #selector(registerClicked(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapRegisterButton(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -141,15 +141,18 @@ class LoginViewController: UIViewController {
     
     // MARK: - Selectors
 
-    @objc private func loginClicked(_ sender: UIButton) {
-
+    @objc private func didTapLoginButton(_ sender: UIButton) {
+        print("Debugger: login tapped")
+        
     }
     
-    @objc private func forgotPasswordClicked(_ sender: UIButton){
-
+    @objc private func didTapForgotPasswordButton(_ sender: UIButton){
+        let forgotPasswordVC = ForgotViewController()
+        self.navigationController?.pushViewController(forgotPasswordVC, animated: true)
     }
     
-    @objc private func registerClicked(_ sender: UIButton){
-
+    @objc private func didTapRegisterButton(_ sender: UIButton){
+        let registerVC = RegisterViewController()
+        self.navigationController?.pushViewController(registerVC, animated: true)
     }
 }

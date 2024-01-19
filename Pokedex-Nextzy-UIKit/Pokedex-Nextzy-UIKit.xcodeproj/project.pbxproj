@@ -15,6 +15,10 @@
 		519FCA102B5A35CE002BC2B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA0F2B5A35CE002BC2B5 /* LoginViewController.swift */; };
 		519FCA122B5A35D7002BC2B5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA112B5A35D7002BC2B5 /* RegisterViewController.swift */; };
 		519FCA142B5A3606002BC2B5 /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA132B5A3606002BC2B5 /* ForgotViewController.swift */; };
+		519FCA162B5A46A3002BC2B5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA152B5A46A3002BC2B5 /* CustomTextField.swift */; };
+		519FCA182B5A46FE002BC2B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA172B5A46FE002BC2B5 /* CustomButton.swift */; };
+		519FCA1A2B5A4733002BC2B5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA192B5A4733002BC2B5 /* Extension.swift */; };
+		519FCA1C2B5A4769002BC2B5 /* ImagePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA1B2B5A4769002BC2B5 /* ImagePickerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		519FCA0F2B5A35CE002BC2B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		519FCA112B5A35D7002BC2B5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		519FCA132B5A3606002BC2B5 /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
+		519FCA152B5A46A3002BC2B5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		519FCA172B5A46FE002BC2B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		519FCA192B5A4733002BC2B5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		519FCA1B2B5A4769002BC2B5 /* ImagePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,9 @@
 		519FC9F32B5A20AF002BC2B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				519FCA152B5A46A3002BC2B5 /* CustomTextField.swift */,
+				519FCA172B5A46FE002BC2B5 /* CustomButton.swift */,
+				519FCA1B2B5A4769002BC2B5 /* ImagePickerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +119,7 @@
 			children = (
 				511EF5252B57830000554F78 /* AppDelegate.swift */,
 				511EF5272B57830000554F78 /* SceneDelegate.swift */,
+				519FCA192B5A4733002BC2B5 /* Extension.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -199,9 +211,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				519FCA1A2B5A4733002BC2B5 /* Extension.swift in Sources */,
+				519FCA162B5A46A3002BC2B5 /* CustomTextField.swift in Sources */,
 				519FCA102B5A35CE002BC2B5 /* LoginViewController.swift in Sources */,
 				519FCA122B5A35D7002BC2B5 /* RegisterViewController.swift in Sources */,
 				511EF52A2B57830000554F78 /* RootViewController.swift in Sources */,
+				519FCA1C2B5A4769002BC2B5 /* ImagePickerButton.swift in Sources */,
+				519FCA182B5A46FE002BC2B5 /* CustomButton.swift in Sources */,
 				511EF5262B57830000554F78 /* AppDelegate.swift in Sources */,
 				511EF5282B57830000554F78 /* SceneDelegate.swift in Sources */,
 				519FCA142B5A3606002BC2B5 /* ForgotViewController.swift in Sources */,
