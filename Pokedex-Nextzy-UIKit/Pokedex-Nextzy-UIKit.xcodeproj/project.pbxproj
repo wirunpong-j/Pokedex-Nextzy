@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		511EF5262B57830000554F78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EF5252B57830000554F78 /* AppDelegate.swift */; };
 		511EF5282B57830000554F78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EF5272B57830000554F78 /* SceneDelegate.swift */; };
-		511EF52A2B57830000554F78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EF5292B57830000554F78 /* ViewController.swift */; };
+		511EF52A2B57830000554F78 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511EF5292B57830000554F78 /* RootViewController.swift */; };
 		511EF52F2B57830100554F78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511EF52E2B57830100554F78 /* Assets.xcassets */; };
 		511EF5322B57830100554F78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511EF5302B57830100554F78 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,7 +18,7 @@
 		511EF5222B57830000554F78 /* Pokedex-Nextzy-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex-Nextzy-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		511EF5252B57830000554F78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511EF5272B57830000554F78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		511EF5292B57830000554F78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		511EF5292B57830000554F78 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		511EF52E2B57830100554F78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511EF5312B57830100554F78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		511EF5332B57830100554F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,14 +54,70 @@
 		511EF5242B57830000554F78 /* Pokedex-Nextzy-UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				511EF5252B57830000554F78 /* AppDelegate.swift */,
-				511EF5272B57830000554F78 /* SceneDelegate.swift */,
-				511EF5292B57830000554F78 /* ViewController.swift */,
+				519FC9F22B5A20A6002BC2B5 /* Model */,
+				519FC9F32B5A20AF002BC2B5 /* View */,
+				519FC9F62B5A20CF002BC2B5 /* ViewModel */,
+				519FC9F72B5A21D5002BC2B5 /* Controller */,
+				519FC9F82B5A21EC002BC2B5 /* Supporting */,
 				511EF52E2B57830100554F78 /* Assets.xcassets */,
 				511EF5302B57830100554F78 /* LaunchScreen.storyboard */,
 				511EF5332B57830100554F78 /* Info.plist */,
 			);
 			path = "Pokedex-Nextzy-UIKit";
+			sourceTree = "<group>";
+		};
+		519FC9F22B5A20A6002BC2B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		519FC9F32B5A20AF002BC2B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		519FC9F62B5A20CF002BC2B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		519FC9F72B5A21D5002BC2B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				511EF5292B57830000554F78 /* RootViewController.swift */,
+				519FC9F92B5A2277002BC2B5 /* Auth */,
+				519FC9FA2B5A227C002BC2B5 /* TabBar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		519FC9F82B5A21EC002BC2B5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				511EF5252B57830000554F78 /* AppDelegate.swift */,
+				511EF5272B57830000554F78 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		519FC9F92B5A2277002BC2B5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		519FC9FA2B5A227C002BC2B5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511EF52A2B57830000554F78 /* ViewController.swift in Sources */,
+				511EF52A2B57830000554F78 /* RootViewController.swift in Sources */,
 				511EF5262B57830000554F78 /* AppDelegate.swift in Sources */,
 				511EF5282B57830000554F78 /* SceneDelegate.swift in Sources */,
 			);
