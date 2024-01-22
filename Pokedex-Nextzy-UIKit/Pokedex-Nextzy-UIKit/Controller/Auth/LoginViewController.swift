@@ -163,9 +163,18 @@ class LoginViewController: UIViewController {
         
         if(authViewModel.isValidEmail(email)){
             if(authViewModel.isValidPassword(password)){
-                showAlert(message: "Login Successfully")
-                authViewModel.signIn()
-                showTabBarController()
+                
+                authViewModel.signIn(email: email, password: password) { result in
+                    switch result {
+                    case .success(let user):
+                        print("Login successful.")
+                        self.showTabBarController()
+                    case .failure(let error):
+                        self.showAlert(message: "Wrong email or password")
+                        print("Login failed with error: \(error.localizedDescription)")
+                    }
+                }
+                
 
             }else{
                 showAlert(message: "Password must be at least 8 character") 

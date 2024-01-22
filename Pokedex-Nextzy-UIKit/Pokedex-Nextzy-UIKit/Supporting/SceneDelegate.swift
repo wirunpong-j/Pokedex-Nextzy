@@ -8,18 +8,38 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    var authViewModel = AuthViewModel()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: scene.coordinateSpace.bounds)
         window?.windowScene = scene
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        
+        if let _ = authViewModel.userSession {
+            presentTabBarController()
+        } else {
+            presentLoginViewController()
+        }
+        
         window?.makeKeyAndVisible()
     }
+
+    func presentLoginViewController() {
+        let loginViewController = LoginViewController(authViewModel: authViewModel)
+        let nav = UINavigationController(rootViewController: loginViewController)
+        nav.modalPresentationStyle = .fullScreen
+        window?.rootViewController = nav
+    }
+
+    func presentTabBarController() {
+        let tabMenu = TabBarController(authViewModel: authViewModel)
+        tabMenu.modalPresentationStyle = .fullScreen
+        window?.rootViewController = tabMenu
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
