@@ -87,21 +87,24 @@ class ForgotViewController: UIViewController {
     
     // MARK: - Selectors
 
-    @objc func didTapForgotButton(_ sender: UIButton){
-        
+    @objc func didTapForgotButton(_ sender: UIButton) {
         if let email = emailTextfield.text {
             print("Debugger: forgot password of \(email)")
             authViewModel.resetPassword(withEmail: email) { result in
                 switch result {
-                case .success(let successMessege):
-                    self.showAlert(message: successMessege)
-                case .failure(let errorMessege):
+                case .success(let successMessage):
+                    self.dismiss(animated: true) {
+                        self.navigationController?.popViewController(animated: true)
+                        self.showAlert(message: successMessage)
+                    }
+                    
+                case .failure(let errorMessage):
                     self.showAlert(message: "Failed to reset password")
-                    print("Debugger: Error from reset password \(errorMessege)")
+                    print("Debugger: Error from reset password \(errorMessage)")
                 }
             }
-            
         }
     }
+
     
 }
