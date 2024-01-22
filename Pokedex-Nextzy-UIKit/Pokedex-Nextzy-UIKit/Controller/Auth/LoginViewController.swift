@@ -11,7 +11,16 @@ class LoginViewController: UIViewController {
 
     
     // MARK: - Varibles
-    
+    private let authViewModel: AuthViewModel
+
+    init(authViewModel: AuthViewModel) {
+        self.authViewModel = authViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - UI Components
     lazy var logoImage: UIImageView = {
@@ -142,7 +151,29 @@ class LoginViewController: UIViewController {
     // MARK: - Selectors
 
     @objc private func didTapLoginButton(_ sender: UIButton) {
-        print("Debugger: login tapped")
+        
+        guard let email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines) else{
+            print("Debugger: Email should not be empty")
+            return
+        }
+        guard let password = passwordField.text else{
+            print("Debugger: Email should not be empty")
+            return
+        }
+        
+        if(authViewModel.isValidEmail(email)){
+            if(authViewModel.isValidPassword(password)){
+                showAlert(message: "Login Successfully")
+                authViewModel.signIn()
+                showTabBarController()
+
+            }else{
+                showAlert(message: "Password must be at least 8 character") 
+            }
+        }else{
+            showAlert(message: "Invalid email")
+        }
+        
         
     }
     
@@ -152,7 +183,28 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func didTapRegisterButton(_ sender: UIButton){
-        let registerVC = RegisterViewController()
+        let registerVC = RegisterViewController(authViewModel: authViewModel)
         self.navigationController?.pushViewController(registerVC, animated: true)
     }
+    
+    // MARK: - Function
+    
+    private func showAlert(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showTabBarController() {
+        print("DEBUG: showTabBarController()")
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+        sceneDelegate?.presentTabBarController()
+    }
+
+    
 }
+
+
+    
+
+
