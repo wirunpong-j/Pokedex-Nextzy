@@ -183,9 +183,25 @@ class RegisterViewController: UIViewController{
             showAlert(message: "Firstname and Lastname must be at least 3 characters")
             return
         }
+        
+        guard let profileImage = profileImageView.image else{
+            return
+        }
 
-        authViewModel.register()
-        showTabBarController()
+        authViewModel.register(withEmail: email, password: password, firstname: firstName, lastname: lastName, profileImageData: profileImage) { result in
+            switch result {
+            case .success(let user):
+                // Registration successful
+                print("Registration successful. User: \(user)")
+                self.showTabBarController()
+                
+                
+            case .failure(let error):
+                // Registration failed
+                print("Registration failed with error: \(error.localizedDescription)")
+            }
+        }
+        
     }
 
 
