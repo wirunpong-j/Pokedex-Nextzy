@@ -9,6 +9,16 @@ import UIKit
 
 class ForgotViewController: UIViewController {
     // MARK: - Varibles
+    private let authViewModel: AuthViewModel
+
+    init(authViewModel: AuthViewModel) {
+        self.authViewModel = authViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     
     // MARK: - UI Components
@@ -81,6 +91,16 @@ class ForgotViewController: UIViewController {
         
         if let email = emailTextfield.text {
             print("Debugger: forgot password of \(email)")
+            authViewModel.resetPassword(withEmail: email) { result in
+                switch result {
+                case .success(let successMessege):
+                    self.showAlert(message: successMessege)
+                case .failure(let errorMessege):
+                    self.showAlert(message: "Failed to reset password")
+                    print("Debugger: Error from reset password \(errorMessege)")
+                }
+            }
+            
         }
     }
     

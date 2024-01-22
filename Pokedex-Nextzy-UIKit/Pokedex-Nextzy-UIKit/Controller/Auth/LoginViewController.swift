@@ -187,7 +187,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc private func didTapForgotPasswordButton(_ sender: UIButton){
-        let forgotPasswordVC = ForgotViewController()
+        let forgotPasswordVC = ForgotViewController(authViewModel: authViewModel)
         self.navigationController?.pushViewController(forgotPasswordVC, animated: true)
     }
     
