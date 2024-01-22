@@ -20,12 +20,26 @@ class AuthViewModel{
     
     // MARK: - Authentication
     
-    func signIn(){
-        print("Debugger: sign in completed")
-    }
+    func signIn(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let _ = authResult {
+                    // fetch user data
+                    completion(.success("Success"))
+                } else if let error = error {
+                    completion(.failure(error))
+                }
+            }
+        }
     
     func signOut(){
-        print("Debugger: sign out completed")
+        do{
+            try Auth.auth().signOut()
+            self.userSession = nil // wipes out user session and takes me to login screen
+            self.currentUser = nil // wipes out current user
+        }catch {
+            print("Failed to sign out with error: \(error.localizedDescription)")
+        }
+        
     }
     
     func register(withEmail email: String, password: String, firstname: String, lastname: String, profileImageData: UIImage, completion: @escaping (Result<User, Error>) -> Void) {
