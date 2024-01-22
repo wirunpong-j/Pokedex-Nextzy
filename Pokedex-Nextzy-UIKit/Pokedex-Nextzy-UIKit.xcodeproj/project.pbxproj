@@ -47,6 +47,10 @@
 		519FCA562B5A6F1F002BC2B5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 519FCA552B5A6F1F002BC2B5 /* FirebaseStorage */; };
 		519FCA582B5A6F1F002BC2B5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 519FCA572B5A6F1F002BC2B5 /* FirebaseStorageCombine-Community */; };
 		519FCA5A2B5A6FD7002BC2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 519FCA592B5A6FD7002BC2B5 /* GoogleService-Info.plist */; };
+		519FCA5C2B5A70DD002BC2B5 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA5B2B5A70DD002BC2B5 /* AuthViewModel.swift */; };
+		519FCA5E2B5A78FE002BC2B5 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA5D2B5A78FE002BC2B5 /* TabBarController.swift */; };
+		519FCA602B5A8F28002BC2B5 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519FCA5F2B5A8F28002BC2B5 /* PokedexViewController.swift */; };
+		51A34ADC2B5E1D9900D5CF19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A34ADB2B5E1D9900D5CF19 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,10 @@
 		519FCA192B5A4733002BC2B5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		519FCA1B2B5A4769002BC2B5 /* ImagePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerButton.swift; sourceTree = "<group>"; };
 		519FCA592B5A6FD7002BC2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		519FCA5B2B5A70DD002BC2B5 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		519FCA5D2B5A78FE002BC2B5 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		519FCA5F2B5A8F28002BC2B5 /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		51A34ADB2B5E1D9900D5CF19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 		519FC9F22B5A20A6002BC2B5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				51A34ADB2B5E1D9900D5CF19 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 		519FC9F62B5A20CF002BC2B5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				519FCA5B2B5A70DD002BC2B5 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 		519FC9FA2B5A227C002BC2B5 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				519FCA5D2B5A78FE002BC2B5 /* TabBarController.swift */,
+				519FCA5F2B5A8F28002BC2B5 /* PokedexViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -307,8 +319,12 @@
 				519FCA122B5A35D7002BC2B5 /* RegisterViewController.swift in Sources */,
 				511EF52A2B57830000554F78 /* RootViewController.swift in Sources */,
 				519FCA1C2B5A4769002BC2B5 /* ImagePickerButton.swift in Sources */,
+				51A34ADC2B5E1D9900D5CF19 /* User.swift in Sources */,
+				519FCA602B5A8F28002BC2B5 /* PokedexViewController.swift in Sources */,
 				519FCA182B5A46FE002BC2B5 /* CustomButton.swift in Sources */,
+				519FCA5C2B5A70DD002BC2B5 /* AuthViewModel.swift in Sources */,
 				511EF5262B57830000554F78 /* AppDelegate.swift in Sources */,
+				519FCA5E2B5A78FE002BC2B5 /* TabBarController.swift in Sources */,
 				511EF5282B57830000554F78 /* SceneDelegate.swift in Sources */,
 				519FCA142B5A3606002BC2B5 /* ForgotViewController.swift in Sources */,
 			);
