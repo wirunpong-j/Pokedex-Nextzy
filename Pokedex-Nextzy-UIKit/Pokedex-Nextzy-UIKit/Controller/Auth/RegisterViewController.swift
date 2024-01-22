@@ -12,7 +12,16 @@ class RegisterViewController: UIViewController{
     
     
     // MARK: - UI Components
-    
+    private let authViewModel: AuthViewModel
+
+    init(authViewModel: AuthViewModel) {
+        self.authViewModel = authViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // Profile image and cover
     lazy var coverScreenView = UIView()
@@ -59,8 +68,10 @@ class RegisterViewController: UIViewController{
         super.viewDidLoad()
         setupNavbar()
         setupUI()
+        imagePicker.delegate = self
         imagePickerButton.addTarget(self, action: #selector(didTapPhotoButton), for: .touchUpInside)
         registerButton.addTarget(self, action: #selector(didClickRegister(_:)), for: .touchUpInside)
+        
 
     }
     
@@ -144,16 +155,70 @@ class RegisterViewController: UIViewController{
     
     
     // MARK: - Selectors
-    @objc func didClickRegister(_ sender: UIButton!){
-        print("Debugger: registered tapped")
+    @objc func didClickRegister(_ sender: UIButton!) {
+        guard let email = emailTextfield.text,
+              let password = passwordTextfield.text,
+              let confirmPassword = confirmTextfield.text,
+              let firstName = firstnameTextfield.text,
+              let lastName = lastnameTextfield.text else {
+                  return
+              }
+
+        guard authViewModel.isValidEmail(email) else {
+            showAlert(message: "Invalid email")
+            return
+        }
+
+        guard authViewModel.isValidPassword(password) else {
+            showAlert(message: "Password must be at least 8 characters")
+            return
+        }
+
+        guard password == confirmPassword else {
+            showAlert(message: "Password does not match with Confirm password")
+            return
+        }
+
+        guard firstName.count >= 3 && lastName.count >= 3 else {
+            showAlert(message: "Firstname and Lastname must be at least 3 characters")
+            return
+        }
+
+        authViewModel.register()
+        showTabBarController()
     }
+
+
     
     @objc private func didTapPhotoButton(){
-        print("Debugger: Image picker tapped")
+        present(imagePicker, animated: true, completion: nil)
 
     }
+    
+    // MARK: - Function
+
+    private func showTabBarController() {
+        print("DEBUG: showTabBarController()")
+        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+        sceneDelegate?.presentTabBarController()
+    }
+    
 
 
 
+}
+
+extension RegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+
+            profileImageView.image = selectedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 
